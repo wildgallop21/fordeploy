@@ -84,11 +84,12 @@ const Review = () => {
   // console.log(paramsComment)
 
   const reviews = useSelector((state) => state.reviews.reviews);
-  const comments = useSelector((state) => state.comments.comments);
+  const comments = useSelector((state) => state);
+  console.log(comments)
 
-  const filteredComments = comments.filter((el)=> el.reviewsId === id )
+  // const filteredComments = comments.filter((el)=> el.reviewsId === id )
 
-  console.log(filteredComments)
+  console.log(comments)
   
   return (
     <div>
@@ -154,7 +155,7 @@ const Review = () => {
             )
           )}
       </Reviews>
-      <Comments>
+      {/* <Comments>
       {filteredComments
           .map(
             (comment) => (
@@ -163,7 +164,7 @@ const Review = () => {
               </div>
             ))
         }        
-      </Comments>
+      </Comments> */}
         </div>
   );
 };
