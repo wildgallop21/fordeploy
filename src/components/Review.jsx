@@ -25,7 +25,7 @@ const Review = () => {
   const param = useParams();
   const [comment, setComment] = useState("댓글달아보시지");
   const { id } = useParams();
-
+ 
   console.log(typeof(id))
   const paramsComment = parseInt(id);
   const onClickDeleteButtonHandler = (movieID) => {
